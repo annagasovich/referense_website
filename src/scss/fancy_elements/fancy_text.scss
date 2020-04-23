@@ -1,0 +1,67 @@
+.fancy-text {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: 'FreeSet';
+        font-weight: bolder;
+    }
+
+    /* Размеры */
+    h1 {
+        font-size: 60px;
+    }
+
+    h2 {
+        font-size: 45px;
+    }
+
+    h3 {
+        font-size: 36px;
+    }
+
+    strong,
+    em {
+        font-weight: bold;
+    }
+
+    /* Цвета */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong {
+        color: variables.$color_blue;
+    }
+
+    em {
+        color: variables.$color_yellow;
+    }
+
+    .fancy-outline {
+        @include typography.fancy-strip;
+        font-size: 18px;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .fancy-text {
+        h1 {
+            font-size: 24px;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+
+        h3 {
+            font-size: 20px;
+        }
+    }
+}

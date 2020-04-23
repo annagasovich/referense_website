@@ -1,0 +1,29 @@
+input[type=submit]{
+    text-transform: none;
+    display: block;
+    font-size: inherit;
+    font-weight: normal;
+    border: none;
+    width: 100%;
+}
+
+.fancy-button {
+    background: linear-gradient(90deg, variables.$color_yellow_left 0%, variables.$color_yellow 100%);
+    max-width: 416px;
+    border-radius: 5px;
+    opacity: 1;
+    transition: all .3s;
+    &:hover{
+        opacity: 0.9;
+    }
+
+    @include typography.accurate;
+    @include typography.button-default;
+    @include typography.button-text;
+    &.blue{
+    background: variables.$color_blue;
+    }
+    &.center{
+    	margin: 0 auto;
+    }
+}

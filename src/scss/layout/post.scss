@@ -1,0 +1,43 @@
+.post {
+    @include typography.fancy-strip;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    padding: 20px;
+    padding-bottom: 60px;
+
+
+    h4 {
+        align-self: flex-start;
+        margin-top: 20px;
+    }
+
+    .caption {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        position: absolute;
+        padding: 20px;
+        bottom: 0px;
+
+        .img_wrapper {
+            width: 45px;
+        }
+    }
+}
+
+.posts .column {
+    margin-bottom: 20px;
+
+    &:nth-child(3n+1) h4 {
+        color: variables.$color_red;
+    }
+
+    &:nth-child(3n+2) h4 {
+        color: variables.$color_yellow;
+    }
+
+    &:nth-child(3n+3) h4 {
+        color: variables.$color_blue;
+    }
+}

@@ -1,0 +1,246 @@
+/* Заголовки с горизонтальной чертой */
+.fancy-title {
+    display: flex;
+    align-items: stretch;
+    margin: 60px 0;
+
+    hr {
+        min-width: 30px;
+        min-height: 30px;
+        border-top: 2px solid variables.$color_red;
+        flex: 1;
+        margin-bottom: 0px;
+
+        &:nth-child(3) {
+            border-top: 2px solid variables.$color_yellow;
+        }
+    }
+
+    h2 {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 112.0rem;
+        @include typography.accurate;
+        padding-left: 40px;
+
+        hr {
+            margin-left: 30px;
+            border-top: 2px solid variables.$color_yellow;
+        }
+    }
+}
+
+
+/* Список с нумерацией */
+.fancy-number{
+    display: flex;
+    flex-wrap: wrap;
+}
+.fancy-number li {
+    @include typography.fancy-strip;
+    height: 140px;
+    position: relative;
+    padding-left: 100px;
+    list-style: none;
+    width: 48%;
+    margin: 0;
+    &:nth-child(2n) {
+        margin-top: 40px;
+    }
+    &:nth-child(2n+1) {
+        margin-bottom: 40px;
+        margin-right: 4%;
+    }
+
+    &:before {
+        @include typography.corner-image;
+        width: 70px;
+        background-image: url('img/numbers/1.png');
+    }
+
+    @for $i from 1 through 8 {
+        &:nth-child(#{$i}) {
+            &:before {
+                background-image: url('img/numbers/#{$i}.png');
+            }
+        }
+    }
+}
+
+/* Список с ромбиками */
+.fancy-list {
+    margin-top: 60px;
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+
+        li {
+            max-width: 33.3333%;
+            padding-left: 30px;
+            position: relative;
+
+            &:before {
+                position: absolute;
+                top: 5px;
+                left: 0;
+                display: inline-block;
+                content: "";
+                height: 15px;
+                width: 15px;
+                background-image: url('img/icons/diamond-blue.png');
+                background-size: cover;
+            }
+
+            h3 {
+                font-size: 18px;
+                font-weight: bold;
+                color: variables.$color_yellow;
+                max-width: 80%;
+            }
+        }
+    }
+
+    &.red {
+        ul li:before {
+            background-image: url('img/icons/diamond-red.png');
+        }
+    }
+
+    &.two-columns {
+        ul li {
+            width: 50%;
+            max-width: 50%;
+            margin-bottom: 20px;
+        }
+    }
+
+}
+
+/* Градиенты */
+.gradient {
+
+    border-radius: 20px;
+    @include typography.accurate;
+    flex-direction: column;
+    justify-content: space-around;
+    color: white;
+    text-align: center;
+    min-height: 300px;
+    padding: 30px;
+    padding-bottom: 40px;
+
+    .header {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    &-red {
+        background: linear-gradient(0deg, variables.$color_red 0%, variables.$color_red_lighter 100%);
+    }
+
+    &-yellow {
+        background: linear-gradient(0deg, variables.$color_yellow 0%, variables.$color_yellow_lighter 100%);
+    }
+
+    &-blue {
+        background: linear-gradient(0deg, variables.$color_blue 0%, variables.$color_blue_lighter 100%);
+    }
+
+    &-orange {
+        background: linear-gradient(90deg, variables.$color_yellow_left 0%, variables.$color_yellow 100%);
+    }
+
+    .fa {
+        color: white;
+    }
+
+}
+
+/*Полосочки с инфой*/
+
+.fancy-strip {
+    @include typography.fancy-strip;
+    background: white;
+    z-index: 5;
+    position: relative;
+    margin: 60px 0;
+
+    .column {
+        align-self: center;
+    }
+
+    &-list li {
+        @include typography.fancy-strip;
+        position: relative;
+        padding-left: 90px;
+
+        &:nth-child(3n+1) .gradient {
+            background: linear-gradient(0deg, variables.$color_red 0%, variables.$color_red_lighter 100%);
+        }
+
+        &:nth-child(3n+2) .gradient {
+            background: linear-gradient(0deg, variables.$color_blue 0%, variables.$color_blue_lighter 100%);
+        }
+
+        &:nth-child(3n+3) .gradient {
+            background: linear-gradient(0deg, variables.$color_yellow 0%, variables.$color_yellow_lighter 100%);
+        }
+
+        .gradient {
+            @include typography.corner-image;
+            width: 70px;
+            overflow: hidden;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 0;
+            padding: 0px;
+        }
+    }
+    form.row{
+        margin: 0;
+        .column{
+            margin: 0;
+        }
+    }
+}
+
+/* FAQ */
+.fancy-faq {
+    .letter {
+        text-align: center;
+        font-size: 72px;
+        line-height: 85px;
+        color: variables.$color_text;
+    }
+
+    .item {
+        @include typography.fancy-strip;
+        padding: 15px 30px;
+        margin-bottom: 15px;
+        flex-direction: column;
+    }
+
+    .open {
+        .fa-chevron-down:before {
+            content: "\F077";
+            color: variables.$color_text;
+        }
+    }
+
+    .question {
+        color: variables.$color_red;
+        display: flex;
+        width: 100%;
+        font-family: "FreeSet";
+        font-weight: bolder;
+        justify-content: space-between;
+    }
+
+    .answer {
+        align-self: flex-start;
+    }
+}

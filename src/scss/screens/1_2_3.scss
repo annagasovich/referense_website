@@ -1,0 +1,61 @@
+.screen1 .bg-section {
+    background-image: url('../img/bg/office.png');
+    background-size: cover;
+}
+
+.collage {
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    right: -130px;
+    max-width: 400px;
+    z-index: 1;
+}
+
+.fancy-strip {
+    strong {
+        color: variables.$color_blue;
+    }
+
+    em {
+        color: variables.$color_red;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .screen1 {
+        .fancy-text {
+
+            h1,
+            h2 {
+                max-width: 50%;
+            }
+        }
+
+        .collage {
+            top: 0px;
+            right: 20px;
+            max-width: 50%;
+        }
+
+        .fancy-outline {
+            z-index: 5;
+            position: relative;
+            background-color: white;
+        }
+
+        .fancy-strip {
+            em {
+                display: block;
+            }
+        }
+    }
+
+    .screen2 {
+        .fancy-list ul li {
+            max-width: 100%;
+        }
+    }
+
+}

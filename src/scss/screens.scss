@@ -1,0 +1,13 @@
+@use 'variables';
+@use 'typography';
+
+@import './screens/1_2_3';
+@import './screens/4_5_6';
+
+.screen {
+    max-width: 100%;
+    overflow: hidden;
+    .section {
+        padding-top: 60px;
+    }
+}

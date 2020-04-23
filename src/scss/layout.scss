@@ -1,0 +1,43 @@
+@use 'variables';
+@use 'typography';
+
+/*Простые элементы разметки*/
+
+@import './layout/top_menu';
+@import './layout/header_footer';
+@import './layout/boxes';
+@import './layout/images';
+@import './layout/icons';
+@import './layout/post';
+
+/*Общие настройки*/
+
+body {
+    font-family: "Droid Sans";
+    font-size: 14px;
+}
+
+a {
+    color: variables.$color_text;
+}
+
+input {
+    min-height: 60px;
+    margin-bottom: 0px;
+}
+label{
+	font-size: inherit;
+	font-weight: normal;
+}
+
+.screen {
+    min-height: 300px;
+}
+
+/* popup */
+.blocker{
+	z-index: 10;
+}
+.modal{
+	z-index: 20;
+}

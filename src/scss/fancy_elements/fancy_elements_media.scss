@@ -1,0 +1,30 @@
+@media only screen and (max-width: 768px) {
+    .fancy-strip {
+        .fancy-button {
+            margin-top: 20px;
+        }
+    }
+
+    .gradient {
+        margin-bottom: 20px;
+    }
+
+    .fancy-number li {
+        width: 100%;
+        height: auto;
+        min-height: 170px;
+    }
+
+    .fancy-number li:nth-child(2n),
+    .fancy-number li:nth-child(2n+1) {
+        margin-top: 0px;
+        margin-bottom: 20px;
+    }
+    .fancy-title h2{
+    	font-size: 28px;
+    	padding-right: 20px;
+    }
+    .fancy-title h2 hr{
+    	display: none;
+    }
+}

@@ -1,0 +1,45 @@
+.vertical-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.no-padding-box {
+    padding: 0;
+}
+
+.padding-box {
+    padding: 30px;
+
+    &.no-top-padding-box {
+        padding-top: 0px;
+    }
+}
+
+.lighter-box {
+    background: rgba(255, 255, 255, 0.25);
+    margin-top: 30px;
+}
+
+.centred-box {
+    .column {
+        text-align: center;
+    }
+}
+
+hr {
+    border-top: 2px solid white;
+    min-height: 5px;
+    width: 100%;
+}
+.clients {
+        margin: 30px 0;
+    }
+.images-box {
+    .image-container {
+        @include typography.fancy-strip;
+        height: 100%;
+        padding: 0;
+    }
+}

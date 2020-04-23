@@ -1,0 +1,50 @@
+.image_wrapper {
+    position: relative;
+
+    .image_caption_wrapper {
+        width: 100%;
+        bottom: -50px;
+        position: absolute;
+
+        p {
+            margin-bottom: 0px;
+        }
+    }
+
+    .image_caption {
+        @include typography.fancy-strip;
+        flex-direction: column;
+        background: white;
+        width: 300px;
+        margin: 0 auto;
+    }
+}
+
+.checkmark {
+    input[type="checkbox"] {
+        display: none;
+    }
+
+    .fa-check {
+        color: white;
+        padding: 5px;
+        border-radius: 3px;
+        border: 1px solid variables.$color_blue;
+        margin-right: 10px;
+    }
+
+    input:checked~.fa {
+        background: variables.$color_blue;
+
+    }
+}
+
+/* popup */
+.modal{
+    strong{
+        font-size: 18px;
+    }
+    input, .checkmark{
+        margin-bottom: 20px;
+    }
+}

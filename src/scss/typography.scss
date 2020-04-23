@@ -1,0 +1,52 @@
+/* latin */
+@font-face {
+    font-family: 'Droid Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/fonts/droidsans.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'FreeSet';
+    src: url(/fonts/freeset/freeset-bold.woff) format('woff');
+}
+
+
+@mixin accurate {
+    display: flex;
+    align-items: center;
+}
+
+@mixin button-text {
+    color: white;
+    text-align: center;
+    justify-content: center;
+}
+
+@mixin button-default {
+    min-height: 60px;
+    cursor: pointer;
+}
+
+
+@mixin has-min-size {
+    min-height: 100px;
+    min-width: 100px;
+}
+
+@mixin fancy-strip {
+    box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 30px;
+    @include accurate;
+}
+
+@mixin corner-image {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-size: cover;
+    border-radius: 10px 0px 0px 10px;
+}

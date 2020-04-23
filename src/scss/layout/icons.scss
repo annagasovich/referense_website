@@ -1,0 +1,17 @@
+.fa {
+    &.rounded {
+        min-width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        border: 2px solid variables.$color_text_secondary;
+        position: relative;
+        margin-right: 10px;
+
+        &:before {
+            position: absolute;
+            top: 6px;
+            left: 8px;
+        }
+    }
+
+}

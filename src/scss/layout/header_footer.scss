@@ -1,0 +1,180 @@
+header {
+    margin-top: 30px;
+}
+
+footer {
+    margin-top: 60px;
+
+    .links {
+        flex-direction: column;
+        margin-left: 20px;
+
+        a {
+            display: block;
+            text-decoration: underline;
+            line-height: 2.5em;
+        }
+    }
+
+    .row .column {
+        padding-top: 30px;
+
+        &:first-child {
+            padding-top: 0;
+        }
+    }
+
+    .join {
+        &-info {
+            text-align: right;
+            margin-top: 30px;
+        }
+
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+
+        .fa {
+            font-size: 36px;
+            color: variables.$color_yellow;
+        }
+    }
+
+    .social {
+        .fa {
+            color: variables.$color_blue;
+            margin-right: 30px;
+            font-size: 18px;
+        }
+    }
+}
+
+.header-contacts,
+.footer-contacts {
+    margin-left: 30px;
+
+    .name,
+    .address {
+        margin-bottom: 10px;
+    }
+
+    .name {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    .address,
+    .email {
+        font-size: 14px;
+        line-height: 16px;
+    }
+}
+
+.header-contacts {
+    .name {
+        color: black;
+    }
+}
+
+.footer-contacts {
+    color: variables.$color_blue;
+
+    a {
+        color: variables.$color_blue;
+    }
+
+    div,
+    p,
+    .address {
+        margin-bottom: 10px;
+        line-height: 1.5em;
+    }
+
+    .address,
+    .email {
+        margin-bottom: 20px;
+    }
+
+    .name {
+        font-size: 16px;
+        margin: 20px 0;
+    }
+}
+
+.header-phone,
+.footer-phone {
+    .phone {
+        text-align: right;
+        font-family: 'Droid Sans';
+        font-weight: bold;
+        font-size: 34px;
+
+        span {
+            font-size: 40px;
+            color: variables.$color_red;
+        }
+    }
+
+    .social {
+        display: flex;
+        justify-content: space-between;
+
+        .fa {
+            color: variables.$color_yellow;
+            margin-right: 5px;
+        }
+
+        span {
+            text-decoration: underline;
+        }
+    }
+}
+
+.social, .join {
+    cursor: pointer;
+}
+
+.footer-phone {
+    .phone {
+        font-size: 24px;
+
+        span {
+            font-size: 28px;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .header-phone,
+    .footer-phone {
+        .phone {
+            text-align: right;
+            font-family: 'Droid Sans';
+            font-weight: bold;
+            font-size: 18px;
+
+            span {
+                font-size: 20px;
+                color: variables.$color_red;
+            }
+        }
+    }
+
+    header .row {
+        flex-direction: row;
+
+        .column.header-logo,
+        .column.header-phone-ect {
+            width: 50%;
+            max-width: 50%;
+            flex: 0 0 50%;
+        }
+
+        .phone {
+            margin-top: 12px;
+        }
+    }
+
+}

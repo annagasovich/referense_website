@@ -1,0 +1,71 @@
+.rounded {
+    border-radius: 10px;
+}
+
+.shade {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 0;
+
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0.4;
+    }
+
+    &-red {
+        &:before {
+            background-color: variables.$color_red;
+        }
+    }
+
+    &-yellow {
+        &:before {
+            background-color: variables.$color_yellow;
+        }
+    }
+
+    &-blue {
+        &:before {
+            background-color: variables.$color_blue;
+        }
+    }
+
+    .logo {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 60px;
+        height: 60px;
+    }
+}
+
+
+.image {
+    &-gift {
+        height: 70px;
+        width: 70px;
+        background-image: url('img/icons/gift.png');
+        background-size: cover;
+    }
+
+    &-warning {
+        height: 40px;
+        width: 40px;
+        background-image: url('img/icons/warning.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .image-warning{
+        margin: 0 auto;
+    }
+}

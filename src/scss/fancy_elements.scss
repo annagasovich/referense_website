@@ -1,0 +1,11 @@
+@use 'variables';
+@use 'typography';
+
+/*Простые элементы разметки*/
+
+@import './fancy_elements/fancy_buttons';
+@import './fancy_elements/fancy_elements';
+@import './fancy_elements/fancy_menu';
+@import './fancy_elements/fancy_text';
+@import './fancy_elements/fancy_form';
+@import './fancy_elements/fancy_elements_media';

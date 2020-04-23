@@ -1,0 +1,15 @@
+/* elements that should not be mobile */
+@media only screen and (max-width: 768px) {
+    .container .row .column {
+        width: 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .top_menu,
+    .fancy-menu,
+    header .row .column-33,
+    header .header-phone .social {
+        display: none;
+    }
+}
