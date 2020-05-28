@@ -14144,6 +14144,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
       data: jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).serialize(),
       success: function success() {}
     });
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).html('Спасибо за заявку, скоро мы перезвоним вам!');
   });
 });
 

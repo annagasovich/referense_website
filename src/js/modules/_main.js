@@ -53,5 +53,6 @@ $(document).ready(function() {
             data: $(this).serialize(),
             success: function() {}
         });
+        $(this).html('Спасибо за заявку, скоро мы перезвоним вам!');
     });
 });

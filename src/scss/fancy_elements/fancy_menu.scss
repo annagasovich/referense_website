@@ -6,22 +6,25 @@
     min-height: 40px;
 
     &-item {
-        padding: 5px 30px;
         border: 2px solid variables.$color_red;
         border-radius: 5px 0 0 0;
         position: relative;
         display: block;
-        padding: 6px 10px;
-        padding-left: 40px;
         text-decoration: none;
         font-size: 1.2rem;
         width: 25%;
         box-sizing: content-box;
         cursor: pointer;
 
+        a{
+            padding: 6px 10px;
+            padding-left: 40px;
+            display: block;
+        }
+
         &:hover {
-            padding-top: 10px;
             a{
+                padding-top: 10px;
                 color: white;
             }
         }

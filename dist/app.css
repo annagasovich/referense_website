@@ -4291,7 +4291,6 @@ input[type=submit] {
   display: flex;
   -webkit-box-align: stretch;
           align-items: stretch;
-  margin: 60px 0;
 }
 
 .fancy-title hr {
@@ -4574,6 +4573,10 @@ input[type=submit] {
 
 /* FAQ */
 
+.fancy-faq {
+  margin-bottom: 50px;
+}
+
 .fancy-faq .letter {
   text-align: center;
   font-size: 72px;
@@ -4630,13 +4633,10 @@ input[type=submit] {
 }
 
 .fancy-menu-item {
-  padding: 5px 30px;
   border: 2px solid #E4172D;
   border-radius: 5px 0 0 0;
   position: relative;
   display: block;
-  padding: 6px 10px;
-  padding-left: 40px;
   text-decoration: none;
   font-size: 1.2rem;
   width: 25%;
@@ -4644,11 +4644,14 @@ input[type=submit] {
   cursor: pointer;
 }
 
-.fancy-menu-item:hover {
-  padding-top: 10px;
+.fancy-menu-item a {
+  padding: 6px 10px;
+  padding-left: 40px;
+  display: block;
 }
 
 .fancy-menu-item:hover a {
+  padding-top: 10px;
   color: white;
 }
 
@@ -4756,6 +4759,7 @@ input[type=submit] {
 .fancy-text h4,
 .fancy-text h5,
 .fancy-text h6,
+.fancy-text th,
 .fancy-text strong {
   color: #003D6E;
 }
@@ -4773,6 +4777,20 @@ input[type=submit] {
   -webkit-box-align: center;
           align-items: center;
   font-size: 18px;
+}
+
+.fancy-text table th {
+  font-family: "FreeSet";
+  font-weight: bolder;
+}
+
+.fancy-text table tr:nth-child(2n) {
+  background-color: #ededed;
+}
+
+.fancy-text table th,
+.fancy-text table td {
+  padding: 15px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -5056,7 +5074,7 @@ footer .social .fa {
 
 .header-phone .phone span,
 .footer-phone .phone span {
-  font-size: 40px;
+  font-size: 1.2em;
   color: #E4172D;
 }
 
@@ -5089,22 +5107,19 @@ footer .social .fa {
 }
 
 .footer-phone .phone span {
-  font-size: 28px;
+  font-size: 1.2em;
 }
 
 @media only screen and (max-width: 768px) {
   .header-phone .phone,
   .footer-phone .phone {
     text-align: right;
-    font-family: "Droid Sans";
-    font-weight: bold;
     font-size: 18px;
   }
 
-  .header-phone .phone span,
-  .footer-phone .phone span {
-    font-size: 20px;
-    color: #E4172D;
+  .footer-phone .phone {
+    font-size: 2.5em;
+    text-align: left;
   }
 
   header .row {
@@ -5123,6 +5138,13 @@ footer .social .fa {
 
   header .row .phone {
     margin-top: 12px;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .header-phone .phone,
+  .footer-phone .phone {
+    font-size: 14px;
   }
 }
 
@@ -5318,11 +5340,22 @@ body {
   font-size: 14px;
 }
 
+input,
+textarea {
+  font-family: "Droid Sans";
+  font-size: 14px;
+}
+
+textarea {
+  padding-top: 17px;
+}
+
 a {
   color: #131318;
 }
 
 input {
+  font-family: "Droid Sans";
   min-height: 60px;
   margin-bottom: 0px;
 }
@@ -5384,6 +5417,14 @@ label {
   color: #E4172D;
 }
 
+.screen2 .fancy-title,
+.screen3 .fancy-title,
+.screen4 .fancy-title,
+.screen5 .fancy-title,
+.screen6 .fancy-title {
+  margin-bottom: 60px;
+}
+
 @media only screen and (max-width: 768px) {
   .screen1 .fancy-text h1,
   .screen1 .fancy-text h2 {
@@ -5428,11 +5469,19 @@ label {
 }
 
 .screen5 .big-form {
-  margin-bottom: 50px;
+  margin-bottom: 90px;
 }
 
 .screen6 .images-box {
   margin-bottom: 50px;
+}
+
+.screen6 .sertificates-slider {
+  display: none;
+}
+
+.screen6 #faq h3 {
+  margin-top: 30px;
 }
 
 .screen7 .fancy-title hr {
@@ -5462,6 +5511,10 @@ label {
   padding-top: 60px;
 }
 
+.desktop_hidden {
+  display: none !important;
+}
+
 /* elements that should not be mobile */
 
 @media only screen and (max-width: 768px) {
@@ -5477,6 +5530,14 @@ label {
   header .row .column-33,
   header .header-phone .social {
     display: none;
+  }
+
+  .desktop_hidden {
+    display: block !important;
+  }
+
+  .mobile_hidden {
+    display: none !important;
   }
 }
 

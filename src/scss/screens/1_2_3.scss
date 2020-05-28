@@ -23,6 +23,12 @@
 }
 
 
+.screen2,.screen3,.screen4,.screen5,.screen6{
+    .fancy-title{
+        margin-bottom: 60px;
+    }
+}
+
 @media only screen and (max-width: 768px) {
     .screen1 {
         .fancy-text {

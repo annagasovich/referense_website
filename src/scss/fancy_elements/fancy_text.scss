@@ -35,6 +35,7 @@
     h4,
     h5,
     h6,
+    th,
     strong {
         color: variables.$color_blue;
     }
@@ -46,6 +47,19 @@
     .fancy-outline {
         @include typography.fancy-strip;
         font-size: 18px;
+    }
+
+    table {
+        th {
+            font-family: 'FreeSet';
+            font-weight: bolder;
+        }
+        tr:nth-child(2n){
+            background-color: #ededed;
+        }
+        th, td{
+            padding: 15px;
+        }
     }
 }
 

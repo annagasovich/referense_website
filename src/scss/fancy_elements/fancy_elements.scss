@@ -2,7 +2,6 @@
 .fancy-title {
     display: flex;
     align-items: stretch;
-    margin: 60px 0;
 
     hr {
         min-width: 30px;
@@ -210,6 +209,7 @@
 
 /* FAQ */
 .fancy-faq {
+    margin-bottom: 50px;
     .letter {
         text-align: center;
         font-size: 72px;

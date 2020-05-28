@@ -1,3 +1,7 @@
+.desktop_hidden {
+    display: none !important;
+}
+
 /* elements that should not be mobile */
 @media only screen and (max-width: 768px) {
     .container .row .column {
@@ -11,5 +15,13 @@
     header .row .column-33,
     header .header-phone .social {
         display: none;
+    }
+
+    .desktop_hidden {
+        display: block !important;
+    }
+
+    .mobile_hidden {
+        display: none !important;
     }
 }

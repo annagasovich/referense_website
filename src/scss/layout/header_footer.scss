@@ -111,7 +111,7 @@ footer {
         font-size: 34px;
 
         span {
-            font-size: 40px;
+            font-size: 1.2em;
             color: variables.$color_red;
         }
     }
@@ -131,7 +131,8 @@ footer {
     }
 }
 
-.social, .join {
+.social,
+.join {
     cursor: pointer;
 }
 
@@ -140,7 +141,7 @@ footer {
         font-size: 24px;
 
         span {
-            font-size: 28px;
+            font-size: 1.2em;
         }
     }
 }
@@ -151,15 +152,13 @@ footer {
     .footer-phone {
         .phone {
             text-align: right;
-            font-family: 'Droid Sans';
-            font-weight: bold;
             font-size: 18px;
-
-            span {
-                font-size: 20px;
-                color: variables.$color_red;
-            }
         }
+    }
+
+    .footer-phone .phone {
+        font-size: 2.5em;
+        text-align: left;
     }
 
     header .row {
@@ -177,4 +176,14 @@ footer {
         }
     }
 
+}
+
+@media only screen and (max-width: 380px) {
+
+    .header-phone,
+    .footer-phone {
+        .phone {
+            font-size: 14px;
+        }
+    }
 }

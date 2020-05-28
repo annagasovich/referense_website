@@ -17,14 +17,24 @@ body {
     font-size: 14px;
 }
 
+input, textarea{
+    font-family: "Droid Sans";
+    font-size: 14px;
+}
+textarea{
+    padding-top: 17px;
+}
+
 a {
     color: variables.$color_text;
 }
 
 input {
+    font-family: "Droid Sans";
     min-height: 60px;
     margin-bottom: 0px;
 }
+
 label{
 	font-size: inherit;
 	font-weight: normal;
