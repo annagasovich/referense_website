@@ -3,6 +3,9 @@ AddDefaultCharset utf-8
 RewriteEngine On
 RewriteBase   /
 
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !price.html
 RewriteRule ^ index.html [L]
